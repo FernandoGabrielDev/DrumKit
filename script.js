@@ -8,7 +8,8 @@ document.querySelector('.composer button').addEventListener('click', () => {
     //console.log("Música", song);
 
     if(song !== ''){
-        let songArray = song.split(''); //separando a string em um array
+        let songLowerCase = song.toLowerCase(); //Código para aceitar a composição em letras maiúsculas. Anteriormente o input só aceitava em letras minúsculas.
+        let songArray = songLowerCase.split(''); //separando a string em um array
         //console.log(songArray);
         playComposition(songArray);
     }
